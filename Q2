@@ -1,0 +1,15 @@
+Explain the output of the above-given code and explain why?
+
+for (var i = 0; i < 5; i++) {
+
+  setTimeout(() => console.log(i), 100)
+
+}
+
+Ans-The output will be: "5 5 5 5 5."
+-->The for loop runs and schedules five setTimeout callbacks. 
+-->The loop completes before any callback executes, so the final value of 'i' is 5.
+-->When the callbacks execute after a 100ms delay, they all share the same variable 'i' from the outer scope, which is 5. 
+-->Therefore, each callback logs 5. 
+-->This is due to closures, as the callbacks maintain a reference to the same 'i' variable with its final value when they execute. 
+-->To achieve the desired output, use an IIFE to create a new scope for each iteration.

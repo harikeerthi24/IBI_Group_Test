@@ -1,0 +1,23 @@
+What are the differences between cookie, local storage and session storage?
+
+Ans-
+1.Cookies:
+Cookies are small pieces of data that websites store on your web browser. 
+They are sent from the web server to your browser when you visit a website and are used to remember information about you or your preferences.
+Cookies can be used for various purposes, such as remembering login credentials, tracking user behavior, or storing items in a shopping cart.
+They have an expiration date, so they can be set to be persistent (stored for a longer time) or session-based (stored only until you close your browser).
+
+2.Local Storage:
+Local storage is a feature provided by web browsers that allows websites to store larger amounts of data (usually in key-value pairs) on your browser.
+Unlike cookies, local storage data is not sent to the server with every request, which makes it faster and more efficient. 
+The data stored in local storage remains on your browser until it is manually cleared by the user or by the website that stored it.
+It is commonly used for saving user settings, caching data, or managing the state of a web application.
+
+3.Session Storage:
+Session storage is quite similar to local storage in terms of usage and syntax, but it has one key difference. 
+While local storage data persists until explicitly removed, session storage data is only available for the duration of a single browsing session.
+A browsing session ends when the user closes the browser tab or window.
+This means that data stored in session storage is temporary and gets cleared automatically when the user ends their session.
+
+
+Each of these mechanisms has its own use cases, and the choice of which one to use depends on the specific needs of the web application or website.

@@ -1,0 +1,44 @@
+What is callback hell? Explain different ways to solve callback hell with examples each.
+
+Ans-
+Callback hell is a situation in asynchronous JavaScript programming where multiple nested callbacks lead to deeply nested and hard-to-read code.
+
+ Techniques to solve:
+1.Using Named Functions: Break down callbacks into separate named functions, improving code readability and structure.
+EXAMPLE-
+function fetchData(callback) { /* ... */ }
+function processData(data, callback) { /* ... */ }
+function displayData(data) { /* ... */ }
+fetchData((fetchedData) => {
+  processData(fetchedData, (processedData) => {
+    displayData(processedData);
+  });
+});
+
+
+2.Using Promises: Use Promises to handle asynchronous operations in a more organized and sequential way.
+EXAMPLE-
+function fetchData() { /* ... */ }
+function processData(data) { /* ... */ }
+fetchData()
+  .then((fetchedData) => processData(fetchedData))
+  .then((processedData) => console.log(processedData))
+  .catch((error) => console.error(error));
+
+
+3.Using Async/Await: Modern approach that makes asynchronous code appear more synchronous, enhancing readability.
+EXAMPLE-
+async function main() {
+  try {
+    const fetchedData = await fetchData();
+    const processedData = await processData(fetchedData);
+    console.log(processedData);
+  } catch (error) {
+    console.error(error);
+  }
+}
+main();
+
+
+Each of these techniques provides a cleaner and more maintainable solution to handle
+asynchronous operations, preventing callback hell and making the code easier to manage and understand.

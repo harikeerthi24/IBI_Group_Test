@@ -1,0 +1,18 @@
+What will the following code's output be in sequence and explain why?
+
+Ans-
+OUTPUT-
+1
+4
+2
+3
+
+Explanation:
+
+1.console.log(1);: Logs 1 to the console immediately.
+
+2.setTimeout(printNumber, 0, 2);: Schedules the printNumber function to be executed with the argument 2 after 0 milliseconds (immediately).
+  However, even though the delay is 0 milliseconds, the function will be executed after the current synchronous code finishes, so it logs 2 after 1 and 4.
+
+3.setTimeout(printNumber, 100, 3);: Schedules the printNumber function to be executed with the argument 3 after 100 milliseconds.
+  As there is a delay of 100 milliseconds, it will execute after 2, so it logs 3 last in the sequence.

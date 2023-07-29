@@ -1,0 +1,9 @@
+What will the code below output to the console and why?
+
+Ans-
+1.var arr1 = "john".split('');: arr1 contains ['j', 'o', 'h', 'n'].
+2.var arr2 = arr1.reverse();: arr1 and arr2 both reference the same reversed array ['n', 'h', 'o', 'j'].
+3.var arr3 = "jones".split('');: arr3 contains ['j', 'o', 'n', 'e', 's'].
+4.arr2.push(arr3);: The arr3 array is added as a single element to arr2, resulting in ['n', 'h', 'o', 'j', ['j', 'o', 'n', 'e', 's']].
+5.console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));: Logs the length of arr1, which is 4, and the last element of arr1, which is 's'.
+6.console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));: Logs the length of arr2, which is 5, and the last element of arr2, which is the array ['j', 'o', 'n', 'e', 's'].
